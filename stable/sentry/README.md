@@ -30,6 +30,11 @@ To install the chart with the release name `my-release`:
 $ helm install --name my-release --wait stable/sentry
 ```
 
+To install the chart with custom config.yaml and release name `my-release`:
+```console
+$ helm install -f config.yaml --name my-release --wait stable/sentry
+```
+
 > **Note**: We have to use the --wait flag for initial creation because the database creationg takes longer than the default 300 seconds
 
 The command deploys Sentry on the Kubernetes cluster in the default configuration. The [configuration](#configuration) section lists the parameters that can be configured during installation.
